@@ -1,0 +1,1 @@
+puts gets.split(//).find_all{|c|c=="1"}.count
