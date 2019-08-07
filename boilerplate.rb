@@ -6,6 +6,12 @@
 # -w : 警告を出力する & $VERBOSE = true にする
 # -c : 文法チェックするだけ
 
+# 環境変数
+# RUBY_THREAD_VM_STACK_SIZE: スレッドを作る時に作成する VM スタックサイズ
+#   （デフォルト: 128KB (32bit CPU) or 256KB (64bit CPU)）
+#     AtCoder のデフォルト: RUBY_THREAD_VM_STACK_SIZE=268435456 (256KiB)
+
+
 # 入力
 N = gets.to_i
 a = gets.strip.split.map(&:to_i)
@@ -58,6 +64,12 @@ Prime.prime_division(99) # 素因数分解
 
 [3, 2, 1].sort_by { |a| a }  #=> [1, 2, 3]
 [3, 2, 1].sort_by { |a| -a } #=> [3, 2, 1]
+
+# トポロジカルソート
+require 'tsort'
+
+# 順序関係のない集合
+require 'set'
 
 # スペースシップ演算子
 1 <=> 0 #=> 1
