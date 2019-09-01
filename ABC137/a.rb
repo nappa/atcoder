@@ -1,4 +1,5 @@
-N = gets.to_i
 a = gets.strip.split.map(&:to_i)
-a = N.times.map{gets.to_i}
-S = gets.strip.chomp
+sum = a[0] + a[1]
+sub = a[0] - a[1]
+mul = a[0] * a[1]
+puts [sum,sub,mul].max
